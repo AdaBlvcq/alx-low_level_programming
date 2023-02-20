@@ -22,11 +22,11 @@ int main(void)
 				if (i != 98 || j != 99)
 				{
 					putchar(',');
-					puychar('');
+					putchar(' ');
 				}
 			}
 		}
 	}
-	puychar('\n');
+	putchar('\n');
 	return (0);
 }
