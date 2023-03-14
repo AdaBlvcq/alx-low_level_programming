@@ -1,18 +1,15 @@
 #include "main.h"
 #include <stdlib.h>
-
 /**
- * *_strdup - copies the string given as parameter
- * @str: string to duplicate
- * Return: pointer to the copied string (Success), NULL (Error)
+ * _strdup - returns a pointer to a newly allocated space in memory.
+ * @str: string.
+ *
+ * Return: pointer of an array of chars
  */
 char *_strdup(char *str)
 {
 	char *strout;
-	unsigned int i, len;
-
-	i = 0;
-	len = 0;
+	unsigned int i, j;
 
 	if (str == NULL)
 		return (NULL);
@@ -25,8 +22,8 @@ char *_strdup(char *str)
 	if (strout == NULL)
 		return (NULL);
 
-	for (len = 0; len <= i; len++)
-		strout[len] = str[i];
+	for (j = 0; j <= i; j++)
+		strout[j] = str[j];
 
 	return (strout);
 }
