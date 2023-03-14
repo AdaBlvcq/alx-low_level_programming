@@ -6,18 +6,29 @@
  * it with a specific char
  * @c: char to intialize
  * @size: number of bytes to allocate
- * Return: a pointer to the array or null if it fails
+ * Return: a pointer to the array or NULL if it fails
  */
 char *create_array(unsigned int size, char c)
 {
-	char *str; 
+	char *arr;
 	unsigned int i;
 
-	str = mallo(sizeof(char) * size);
-	if (size == 0 || size == NULL)
+	if (size == 0)
+	{
+		return (NULL);
+	}
+
+	arr = malloc(sizeof(char) * size);
+
+	/* check if malloc was Successful */
+
+	if (arr == NULL)
 		return (NULL);
 
 	for (i = 0; i < size; i++)
-		str[i] = c;
-	return (str);
+	{
+	arr[i] = c;
+	}
+
+	return (arr);
 }
