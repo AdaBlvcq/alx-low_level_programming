@@ -1,5 +1,5 @@
-#include "holberton.h"
-#include <stdlid.h>
+#include "main.h"
+#include <stdlib.h>
 
 /**
  * *_strdup - copies the string given as parameter
@@ -28,5 +28,5 @@ char *_strdup(char *str)
 	for (len = 0; len <= i; len++)
 		strout[len] = str[i];
 
-	return (duplicate);
+	return (strout);
 }
