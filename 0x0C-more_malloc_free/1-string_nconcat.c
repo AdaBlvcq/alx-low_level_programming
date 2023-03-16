@@ -1,15 +1,15 @@
-#include <stdlib.h>
 #include "main.h"
+#include <stdlib.h>
 /**
- * *string_nconcat - concatenates n bytes of a string to another string
- * @s2: string to append to
- * s2: string to concatenate from
- * @n: number of bytes from s2 to concatenate to s1
+ * string_nconcat - concatenates two strings
+ * @s1: string to append to
+ * @s2: string to concatenate from
+ * @n: number of bytes
  * Return: pointer to the resulting string
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	char *s;
+	char *sout;
 	unsigned int i = 0, j = 0, k = 0, limit = 0;
 
 	if (s1 == NULL)
