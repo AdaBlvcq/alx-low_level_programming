@@ -2,10 +2,10 @@
 #include <stdio.h>
 #include <stdarg.h>
 /**
- * print_strings - prints strings, followed by a new line.
+ * print_strings - prints strings
  * @separator: string to be printed between the strings
  * @n: number of strings passed to the function
- * Return: vo return
+ * Return: no return
  */
 void print_strings(const char *separator, const unsigned int n, ...)
 {
@@ -20,7 +20,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 		str = va_arg(valist, char *);
 
 		if (str)
-			printf("(nil)");
+			printf("%s", str);
 		else
 			printf("(nil)");
 
