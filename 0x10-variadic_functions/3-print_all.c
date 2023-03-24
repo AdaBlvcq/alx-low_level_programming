@@ -4,11 +4,12 @@
 /**
  * print_all - prints anything
  * @format: list of types of arguments passed to the function
+ * Return: no return
  */
 void print_all(const char * const format, ...)
 {
-	unsigned int i = 0, j, c = 0;
 	va_list valist;
+	unsigned int i = 0, j, c = 0;
 	char *str;
 	const char t_arg[] = "cifs";
 
@@ -20,7 +21,6 @@ void print_all(const char * const format, ...)
 		{
 			if (format[i] == t_argc[j] && c)
 			{
-
 				printf(", ");
 				break;
 			} j++;
