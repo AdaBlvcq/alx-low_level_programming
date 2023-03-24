@@ -2,9 +2,9 @@
 #include <stdarg.h>
 /**
  * sum_them_all - returns the sum of all its parameters
- * @n: the number of parameters
- * @...: a variable number of parameters to calculate the sum
- * Return: if n == 0, 0
+ * @n: amount of the arguments
+ *
+ * Return: sum of its parameters
  */
 int sum_them_all(const unsigned int n, ...)
 {
