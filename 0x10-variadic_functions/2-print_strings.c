@@ -5,11 +5,11 @@
  * print_strings - prints strings, followed by a new line.
  * @separator: string to be printed between the strings
  * @n: number of strings passed to the function
- * Return: void
+ * Return: vo return
  */
 void print_strings(const char *separator, const unsigned int n, ...)
 {
-	va_list strings;
+	va_list valist;
 	char *str;
 	unsigned int i;
 
