@@ -1,12 +1,12 @@
 #include <stdio.h>
 
-void first(void) __attribute__ ((constructor));
+void __attribute__((constructor)) flash();
 
 /**
- * bmain - prints a sentence before the main
- * function is executed
+ * flash - Prints strings before the main function is executed
  */
-void first(void)
+
+void flash(void)
 {
 	printf("You're beat! and yet, you must allow,\n");
 	printf("I bore my house upon my back!\n");
