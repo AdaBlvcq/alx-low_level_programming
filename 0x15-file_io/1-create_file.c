@@ -5,14 +5,16 @@
 #include <fcntl.h>
 #include <unistd.h>
 #include <errno.h>
+#include "main.h"
 
-/*
- * create_file - funtion that creates a file
- * @filename - is the name of the file to create
- * @text_content - is a NULL terminated string to write to file
+/**
+ * create_file - a function that creates a file
  *
- * Return: 1 on success, -1 on failure
- */
+ * @filename: name of file to create
+ * @text_content: string to write to file
+ *
+ * Return: 1 on success OR -1 on faliure
+*/
 int create_file(const char *filename, char *text_content)
 {
 	int myfile;
