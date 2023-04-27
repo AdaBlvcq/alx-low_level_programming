@@ -12,7 +12,7 @@
 void print_binary(unsigned long int n)
 {
 	unsigned long int mask = 1;
-	int counter;
+	unsigned int counter;
 
 	for (counter = 0; counter < (sizeof(unsigned long int) * 8); counter++)
 	{
