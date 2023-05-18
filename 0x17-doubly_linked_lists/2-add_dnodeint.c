@@ -1,21 +1,37 @@
 #include "lists.h"
 
 /**
- * print_dlistint - Prints all the elements of a dlistint_t list.
- * @h: A pointer to the head of the doubly linked list.
- *
- * Return: The number of nodes in the doubly linked list.
+ * add_dnodeint - adds a new node at the beginning
+ * of a dlistint_t list
+ * @head: head of the list
+ * @n: value of the element
+ * Return: the address of the new element
  */
-size_t print_dlistint(const dlistint_t *h)
+dlistint_t *add_dnodeint(dlistint_t **head, const int n)
 {
-	size_t count = 0;
+	dlistint_t *new;
+	dlistint_t *h;
 
-	while (h != NULL)
+	new = malloc(sizeof(dlistint_t));
+	if (new == NULL)
+		return (NULL);
+
+	new->n = n;
+	new->prev = NULL;
+	h = *head;
+
+	if (h != NULL)
 	{
-		printf("%d\n", h->n);
-		h = h->next;
-		count++;
+		while (h->prev != NULL)
+			h = h->prev;
 	}
 
-	return (count);
+	new->next = h;
+
+	if (h != NULL)
+		h->prev = new;
+
+	*head = new;
+
+	return (new);
 }
